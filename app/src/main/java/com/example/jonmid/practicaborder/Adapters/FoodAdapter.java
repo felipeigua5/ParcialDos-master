@@ -24,15 +24,12 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         this.context = context;
     }
 
-    // ******************************************************************************
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Obtener la vista (item.xml)
+
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
 
-        // Pasar la vista (item.xml) al ViewHolder
         ViewHolder viewHolder = new ViewHolder(item);
 
         return viewHolder;
@@ -40,7 +37,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Asignar los valores a la vista
         holder.textViewTitleFood.setText(foodList.get(position).getTitle());
     }
 
@@ -48,8 +44,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     public int getItemCount() {
         return foodList.size();
     }
-
-    // ******************************************************************************
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView textViewTitleFood;

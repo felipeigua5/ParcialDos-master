@@ -7,7 +7,6 @@ public class Game {
     private String gameSeries;
 
     public Game(){}
-
     public Game(String name, String character, String gameSeries) {
         this.name = name;
         this.character = character;

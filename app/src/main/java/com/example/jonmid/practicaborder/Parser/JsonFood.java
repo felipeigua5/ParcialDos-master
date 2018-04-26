@@ -14,9 +14,9 @@ public class JsonFood {
     public static List<Food> getData(String content) throws JSONException {
 
         JSONObject jsonData = new JSONObject(content);
-        JSONArray jsonArray = jsonData.getJSONArray("result");
+        JSONArray jsonArray = jsonData.getJSONArray("results");
 
-        List<Food> foodList = new ArrayList<>();
+        List<Food> postList = new ArrayList<>();
 
         for (int i = 0; i < jsonArray.length(); i++){
 
@@ -24,11 +24,10 @@ public class JsonFood {
 
             Food food = new Food();
             food.setTitle(item.getString("title"));
-
-            foodList.add(food);
+            postList.add(food);
 
         }
-
-        return foodList;
+        return postList;
     }
+
 }

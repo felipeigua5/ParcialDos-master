@@ -76,9 +76,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-     * EJECUTAR LA TAREA Y TRAER TODOS LOS DATOS DE LA TAREA ASINCRONA
-     */
     public void loadData() {
         if (isOnLine()) {
 
@@ -90,14 +87,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // *************************************************************************************
-
     public void processData() {
         foodAdapter = new FoodAdapter(foodList, getApplicationContext());
         recyclerView.setAdapter(foodAdapter);
     }
 
-    // Tarea para traer los datos de post
     public class MyTask extends AsyncTask<String, String, String> {
         @Override
         protected void onPreExecute() {
@@ -135,6 +129,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
 
 }

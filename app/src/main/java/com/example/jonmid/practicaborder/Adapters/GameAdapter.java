@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.jonmid.practicaborder.Models.Game;
 import com.example.jonmid.practicaborder.R;
 
@@ -22,24 +21,20 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
         this.gameList = gameList;
         this.context = context;
     }
-
     // ******************************************************************************
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Obtener la vista (item.xml)
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_game, parent, false);
 
-        // Pasar la vista (item.xml) al ViewHolder
         ViewHolder viewHolder = new ViewHolder(item);
-
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Asignar los valores a la vista
+
         holder.textViewNameGame.setText(gameList.get(position).getName());
         holder.textViewCharacterGame.setText(gameList.get(position).getCharacter());
         holder.textViewGameSeriesGame.setText(gameList.get(position).getGameSeries());
@@ -50,13 +45,10 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
         return gameList.size();
     }
 
-    // ******************************************************************************
-
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView textViewNameGame;
         TextView textViewCharacterGame;
         TextView textViewGameSeriesGame;
-
 
         public ViewHolder(View item) {
             super(item);

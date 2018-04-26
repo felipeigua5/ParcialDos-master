@@ -8,7 +8,6 @@ public class Food {
     private String thumbnail;
 
     public Food(){}
-
     public Food(String title, String href, String ingredients, String thumbnail) {
         this.title = title;
         this.href = href;
