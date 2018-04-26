@@ -21,7 +21,6 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
         this.gameList = gameList;
         this.context = context;
     }
-    // ******************************************************************************
 
     @NonNull
     @Override
